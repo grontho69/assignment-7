@@ -78,6 +78,40 @@ Create a README file to answer the following question-
 
 ---
 
+## Questions & Answers
+
+1. What is JSX, and why is it used?
+
+  JSX (JavaScript XML) is a syntax extension for JavaScript that looks like HTML. It is used with React to describe the UI structure in a declarative way. JSX makes component markup easier to write and read and is compiled to React.createElement calls.
+
+2. What is the difference between State and Props?
+
+  - Props (properties) are read-only values passed from parent to child components. They are immutable inside the child.
+  - State is internal to a component and can be changed with hooks like useState. State changes trigger re-renders.
+
+3. What is the useState hook, and how does it work?
+
+  The useState hook is a React hook that lets you add state to functional components. It returns a state variable and a setter function: const [value, setValue] = useState(initialValue). Calling setValue updates the state and triggers a re-render.
+
+4. How can you share state between components in React?
+
+  Common approaches:
+
+  - Lift state up: keep state in the nearest common parent and pass it down via props.
+  - Context API: provide state via React.createContext to avoid prop drilling.
+  - State management libraries (Redux, Zustand) for larger apps.
+
+5. How is event handling done in React?
+
+  React uses camelCase event handlers passed as props (e.g., onClick, onChange). You pass a function reference or arrow function: <button onClick={() => doSomething()}>Click</button>. Handlers receive a synthetic event object.
+
+---
+
+Notes:
+
+- This project uses React-Toastify to show toast notifications instead of window.alert. Interactions such as adding a ticket to Task Status and marking it complete produce toasts and update the banner counts.
+
+
 ### 
 
 ## 📌 Challenge Requirements 
