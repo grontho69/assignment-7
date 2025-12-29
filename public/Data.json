@@ -104,7 +104,7 @@
     "description": "Language change option does not update content.",
     "customer": "Kamal Hossain",
     "priority": "Low",
-    "status": "open",
+    "status": "In-Progress",
     "createdAt": "2025-01-12"
   },
   {
@@ -122,7 +122,7 @@
     "description": "Settings page crashes when opening notification settings.",
     "customer": "Sumaiya Akter",
     "priority": "Medium",
-    "status": "open",
+    "status": "In-Progress",
     "createdAt": "2025-01-14"
   }
 ]

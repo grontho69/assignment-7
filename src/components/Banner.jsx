@@ -4,7 +4,7 @@ import Container from "./Container";
 const Banner = ({ inProgress = 0, resolved = 0 }) => {
   return (
     <Container>
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 px-8">
 
         {/* In Progress Card */}
         <div className="relative h-48 rounded-md overflow-hidden

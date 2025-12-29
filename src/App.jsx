@@ -14,10 +14,10 @@ const App = () => {
   const [inProgress, setInProgress] = useState([]);
   const [resolved, setResolved] = useState([]);
 
-  // ✅ Fetch tickets (correct way)
+ 
   const fetchTickets = async () => {
     try {
-      const res = await fetch("Data.json"); // <-- move JSON to public folder
+      const res = await fetch("Data.json"); 
       const data = await res.json();
       setTickets(data);
     } catch (error) {
@@ -32,7 +32,7 @@ const App = () => {
     })();
   }, []);
 
-  // ✅ Add ticket to Task Status
+
   const handleAddToTask = (ticket) => {
     const alreadyAdded = inProgress.find(t => t.id === ticket.id);
     if (alreadyAdded) {
@@ -45,7 +45,7 @@ const App = () => {
     toast.info("Added to Task Status");
   };
 
-  // ✅ Complete task
+  
   const handleCompleteTask = (ticket) => {
     setInProgress(prev => prev.filter(t => t.id !== ticket.id));
     setResolved(prev => [...prev, ticket]);
@@ -62,11 +62,11 @@ const App = () => {
         resolved={resolved.length}
       />
 
-      {/* Main Section */}
+     
       <Container>
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6">
 
-          {/* Customer Tickets */}
+        
           <div className="lg:col-span-2">
             <h2 className="font-semibold text-lg mb-4">
               Customer Tickets
@@ -78,7 +78,7 @@ const App = () => {
             />
           </div>
 
-          {/* Task Status */}
+         
           <TaskStatus
             tasks={inProgress}
             resolved={resolved}
