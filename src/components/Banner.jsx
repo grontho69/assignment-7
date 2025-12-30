@@ -1,6 +1,7 @@
 import bannerImg from "../assets/vector1.png";
-import Container from "./Container";
 
+
+import Container from './Container';
 const Banner = ({ inProgress = 0, resolved = 0 }) => {
   return (
     <Container>
