@@ -17,7 +17,7 @@ const App = () => {
  
   const fetchTickets = async () => {
     try {
-      const res = await fetch("Data.json"); 
+      const res = await fetch("/data.json"); 
       const data = await res.json();
       setTickets(data);
     } catch (error) {
